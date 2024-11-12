@@ -1,0 +1,30 @@
+checkov:
+  # Specify the list of directories to scan
+  directories:
+    - .
+
+  # Specify the list of checks to skip
+  skip-check:
+    # Add the ID(s) of the checks you want to skip
+    - CKV_AZURE_2   # Example: Skip check for ensuring S3 buckets have versioning enabled
+    - CKV_AZURE_15 # Example: Skip check for ensuring SQL databases have auditing enabled
+
+  # Enable or disable specific categories of checks
+  checks:
+    # You can add more categories or specific checks here
+    - secrets
+
+  # Additional configuration options for checkov scan
+  config:
+    soft-fail: true  # Allows the scan to pass even if issues are found
+    quiet: false     # Show detailed output in the console
+    compact: true    # Show compact output for readability
+    external-checks-dir: ./custom-checks  # Directory for custom Checkov checks
+
+  # Output settings
+  output:
+    # Specify the output format (json, cli, junitxml, etc.)
+    #- cli
+    #- json
+    # Path to save the output (if you want to save it to a file)
+    #output-file-path: ./checkov-output.json
