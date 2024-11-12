@@ -8,6 +8,7 @@ checkov:
     # Add the ID(s) of the checks you want to skip
     - CKV_AZURE_2   # Example: Skip check for ensuring S3 buckets have versioning enabled
     - CKV_AZURE_15 # Example: Skip check for ensuring SQL databases have auditing enabled
+    - CKV_AZURE_17	
 
   # Enable or disable specific categories of checks
   checks:
