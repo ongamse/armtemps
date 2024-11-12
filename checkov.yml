@@ -1,6 +1,5 @@
 directory: .
 skip-check: CKV_AZURE_2,CKV_AZURE_15,CKV_AZURE_17, CKV_AZURE_18
-check: secrets
 soft-fail: true
 quiet: false
 compact: true
